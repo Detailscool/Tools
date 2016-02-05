@@ -34,4 +34,14 @@
  *  @return 截图后的带边框的图片
  */
 + (instancetype)clipImageWithImageName:(NSString *)name andArea:(CGRect)clipArea andScale:(CGFloat)scale withBorderWidth:(CGFloat)borderWidth andborderColor:(UIColor *)color;
+
+
+/**
+ *  给图以宽高最小为直径截取
+ *
+ *  @param name 图片名字
+ *
+ *  @return 截取后图片
+ */
++ (instancetype)clipImageWithImageName:(NSString *)name;
 @end

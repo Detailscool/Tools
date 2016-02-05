@@ -91,7 +91,9 @@
 }
 
 
-
++ (instancetype)clipImageWithImageName:(NSString *)name {
+    return [self clipImageWithImageName:name andArea:CGRectMake(0, 0, MAXFLOAT, MAXFLOAT) andScale:1];
+}
 
 
 @end
