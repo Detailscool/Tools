@@ -1,2 +1,2 @@
 # Tools
-These are tools for app UI developing,including categories and frameworks.
+This is a diretory for ojective-c UI developing,which contains plenty of useful categories and frameworks.
