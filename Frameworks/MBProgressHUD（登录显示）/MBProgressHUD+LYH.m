@@ -1,14 +1,13 @@
 //
-//  MBProgressHUD+LYH.m
+//  MBProgressHUD+NJ.m
 //
-//  Created by Detailscool on 16/2/5.
-//  Copyright © 2016年 Detailscool. All rights reserved.
+//  Created by 李南江 on 14-5-5.
+//  Copyright (c) 2014年 itcast. All rights reserved.
 //
 
 #import "MBProgressHUD+LYH.h"
 
 @implementation MBProgressHUD (LYH)
-
 #pragma mark 显示信息
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view
 {
@@ -81,5 +80,4 @@
 {
     [self hideHUDForView:nil];
 }
-
 @end
