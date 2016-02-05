@@ -1,13 +1,15 @@
 //
-//  MBProgressHUD+NJ.h
+//  MBProgressHUD+LYH.h
+//  UserLogin
 //
-//  Created by 李南江 on 14-5-5.
-//  Copyright (c) 2014年 itcast. All rights reserved.
+//  Created by Detailscool on 16/2/5.
+//  Copyright © 2016年 Detailscool. All rights reserved.
 //
 
-#import "MBProgressHUD.h"
+#import "MBProgressHUD.m"
 
-@interface MBProgressHUD (PKX)
+@interface MBProgressHUD (LYH)
+
 + (void)showSuccess:(NSString *)success toView:(UIView *)view;
 + (void)showError:(NSString *)error toView:(UIView *)view;
 
@@ -21,5 +23,6 @@
 
 + (void)hideHUDForView:(UIView *)view;
 + (void)hideHUD;
+
 
 @end
