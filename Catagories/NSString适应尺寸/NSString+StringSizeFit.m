@@ -1,6 +1,5 @@
 //
 //  NSString+StringSizeFit.m
-//  QQDialog
 //
 //  Created by Detailscool on 15/12/25.
 //  Copyright © 2015年 Detailscool. All rights reserved.

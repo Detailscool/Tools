@@ -1,11 +1,8 @@
-
-
 //
 //  NSObject+DigView.m
-//  02-私人通讯录(掌握)
 //
 //  Created by Detailscool on 16/1/4.
-//  Copyright © 2016年 itcast. All rights reserved.
+//  Copyright © 2016年 Detailscool. All rights reserved.
 //
 
 #import "NSObject+DigView.h"

@@ -1,3 +1,0 @@
-target 'GDataXML-HTML', :exclusive => true do
-	pod "GDataXML-HTML", :path => "../"
-end

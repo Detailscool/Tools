@@ -1,6 +1,5 @@
 //
 //  NSObject+LYHLog.h
-//  NSkeyedArchiver
 //
 //  Created by Detailscool on 16/1/3.
 //  Copyright © 2016年 Detailscool. All rights reserved.

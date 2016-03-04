@@ -1,6 +1,5 @@
 //
 //  UIImage+Extension.m
-//  02-QQ聊天-(掌握)
 //
 //  Created by gzxzmac on 15/12/25.
 //  Copyright © 2015年 gzxzmac. All rights reserved.

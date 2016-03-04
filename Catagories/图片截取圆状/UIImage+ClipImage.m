@@ -1,7 +1,5 @@
-
 //
 //  UIImage+ClipImage.m
-//  ImageContextTest
 //
 //  Created by Detailscool on 16/1/13.
 //  Copyright © 2016年 Detailscool. All rights reserved.
@@ -11,17 +9,12 @@
 
 @implementation UIImage (ClipImage)
 
-+ (instancetype)clipImageWithImageName:(NSString *)name andArea:(CGRect)clipArea andScale:(CGFloat)scale{
+- (instancetype)clipImageWithArea:(CGRect)clipArea Scale:(CGFloat)scale {
     
-    UIImage *img = [UIImage imageNamed:name];
-    
-    CGFloat imgMin = MIN(img.size.height*scale, img.size.height*scale);
-    
-    CGFloat clipX = clipArea.origin.x>imgMin?0:clipArea.origin.x;
-    CGFloat clipY = clipArea.origin.y>imgMin?0:clipArea.origin.y;
-    CGFloat clipW = clipX+clipArea.size.width>imgMin?imgMin-clipX:clipArea.size.width;
-    CGFloat clipH = clipY+clipArea.size.height>imgMin?imgMin-clipY:clipArea.size.height;
-    
+    CGFloat clipX = clipArea.origin.x>self.size.width*scale?0:clipArea.origin.x;
+    CGFloat clipY = clipArea.origin.y>self.size.height*scale?0:clipArea.origin.y;
+    CGFloat clipW = clipX+clipArea.size.width>self.size.width*scale?self.size.width*scale-clipX:clipArea.size.width;
+    CGFloat clipH = clipY+clipArea.size.height>self.size.height*scale?self.size.height*scale-clipY:clipArea.size.height;
     CGFloat clipSize = MIN(clipW, clipH);
     
     //开启位图上下文
@@ -34,31 +27,26 @@
     
     CGContextClip(ctx);
     
-    [img drawInRect: CGRectMake(-clipX,-clipY,imgMin,imgMin)];
+    [self drawInRect: CGRectMake(-clipX-(clipW - clipSize)*0.5,-clipY-(clipH - clipSize)*0.5,clipSize,clipSize)];
     
     CGContextFillPath(ctx);
     
     //从位图上下文获得图形上下文
-    UIImage * newImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage * newimage = UIGraphicsGetImageFromCurrentImageContext();
     
     //关闭位图上下文
     UIGraphicsEndImageContext();
     
-    
-    return newImg;
+    return newimage;
     
 }
 
-+ (instancetype)clipImageWithImageName:(NSString *)name andArea:(CGRect)clipArea andScale:(CGFloat)scale withBorderWidth:(CGFloat)borderWidth andborderColor:(UIColor *)color{
+- (instancetype)clipImageWithArea:(CGRect)clipArea Scale:(CGFloat)scale borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor{
     
-    UIImage *img = [UIImage imageNamed:name];
-    
-    CGFloat imgMin = MIN(img.size.height*scale, img.size.height*scale);
-    
-    CGFloat clipX = clipArea.origin.x>imgMin?0:clipArea.origin.x;
-    CGFloat clipY = clipArea.origin.y>imgMin?0:clipArea.origin.y;
-    CGFloat clipW = clipX+clipArea.size.width>imgMin?imgMin-clipX:clipArea.size.width;
-    CGFloat clipH = clipY+clipArea.size.height>imgMin?imgMin-clipY:clipArea.size.height;
+    CGFloat clipX = clipArea.origin.x>self.size.width*scale?0:clipArea.origin.x;
+    CGFloat clipY = clipArea.origin.y>self.size.height*scale?0:clipArea.origin.y;
+    CGFloat clipW = clipX+clipArea.size.width>self.size.width*scale?self.size.width*scale-clipX:clipArea.size.width;
+    CGFloat clipH = clipY+clipArea.size.height>self.size.height*scale?self.size.height*scale-clipY:clipArea.size.height;
     
     CGFloat clipSize = MIN(clipW, clipH);
     
@@ -68,7 +56,7 @@
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
     //大圆
-    [color set];
+    [borderColor set];
     CGContextAddEllipseInRect(ctx, CGRectMake(0, 0, clipSize+borderWidth, clipSize+borderWidth));
     CGContextFillPath(ctx);
     
@@ -77,23 +65,26 @@
     
     CGContextClip(ctx);
     
-    [img drawInRect: CGRectMake(-clipX,-clipY,imgMin+borderWidth,imgMin+borderWidth)];
+    [self drawInRect: CGRectMake(-clipX-(clipW - clipSize)*0.5,-clipY-(clipH - clipSize)*0.5,clipSize+borderWidth,clipSize+borderWidth)];
     
     CGContextFillPath(ctx);
     
     //从位图上下文获得图形上下文
-    UIImage * newImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage * newimage = UIGraphicsGetImageFromCurrentImageContext();
     //关闭位图上下文
     UIGraphicsEndImageContext();
     
-    return newImg;
+    return newimage;
     
 }
 
 
-+ (instancetype)clipImageWithImageName:(NSString *)name {
-    return [self clipImageWithImageName:name andArea:CGRectMake(0, 0, MAXFLOAT, MAXFLOAT) andScale:1];
+- (instancetype)clipImage {
+    return [self clipImageWithArea:CGRectMake(0, 0, MAXFLOAT, MAXFLOAT) Scale:1];
 }
 
+- (instancetype)clipImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor {
+    return [self clipImageWithArea:CGRectMake(0, 0, MAXFLOAT, MAXFLOAT) Scale:1 borderWidth:borderWidth borderColor:borderColor];
+}
 
 @end

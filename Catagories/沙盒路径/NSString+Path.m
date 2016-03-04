@@ -1,6 +1,5 @@
 //
 //  NSString+Path.m
-//  AppWithNSOperation
 //
 //  Created by Detailscool on 16/2/1.
 //  Copyright © 2016年 Detailscool. All rights reserved.
