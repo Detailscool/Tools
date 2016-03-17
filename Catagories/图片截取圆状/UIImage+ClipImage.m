@@ -27,7 +27,8 @@
     
     CGContextClip(ctx);
     
-    [self drawInRect: CGRectMake(-clipX-(clipW - clipSize)*0.5,-clipY-(clipH - clipSize)*0.5,clipSize,clipSize)];
+//    [self drawInRect: CGRectMake(-clipX-(clipW - clipSize)*0.5,-clipY-(clipH - clipSize)*0.5,clipSize,clipSize)];
+    [self drawInRect: CGRectMake(-clipX,-clipY,clipSize,clipSize)];
     
     CGContextFillPath(ctx);
     
@@ -65,7 +66,9 @@
     
     CGContextClip(ctx);
     
-    [self drawInRect: CGRectMake(-clipX-(clipW - clipSize)*0.5,-clipY-(clipH - clipSize)*0.5,clipSize+borderWidth,clipSize+borderWidth)];
+//    [self drawInRect: CGRectMake(-clipX-(clipW - clipSize)*0.5,-clipY-(clipH - clipSize)*0.5,clipSize+borderWidth,clipSize+borderWidth)];
+    
+    [self drawInRect: CGRectMake(-clipX,-clipY,clipSize+borderWidth,clipSize+borderWidth)];
     
     CGContextFillPath(ctx);
     
