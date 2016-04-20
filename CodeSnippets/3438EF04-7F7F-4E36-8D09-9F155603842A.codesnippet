@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>datepicker</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UIDatePicker *)datePicker
+{
+    if (!_datePicker) {
+        _datePicker = [[UIDatePicker alloc]init];
+       
+        NSLog(@"PickerView被创建");
+        //设置时区
+        _datePicker.locale = [NSLocale localeWithLocaleIdentifier:@"zh_CN"];
+        //设置时间模式
+        _datePicker.datePickerMode = UIDatePickerModeDate;
+        //设置最小时间
+        _datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:(-30*365*24*3600)];
+        
+        //设置时间改变动作
+        [_datePicker addTarget:self action:@selector(dateValueChange:) forControlEvents:UIControlEventValueChanged ];
+    }
+    return _datePicker;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3438EF04-7F7F-4E36-8D09-9F155603842A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>DatePickerMake</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

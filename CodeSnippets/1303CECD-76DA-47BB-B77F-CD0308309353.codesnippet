@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>nwdp</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (instancetype) &lt;#name#&gt;WithDictionary:(NSDictionary *)dict
+{
+    id obj = [[self alloc]init];
+    
+    NSArray * properties = [self properties];
+    
+    for (NSString * property in properties) {
+        if (dict[property]) {
+            [obj setValue:dict[property] forKey:property];
+        }
+    }
+    
+    return obj;
+}
+
+
++ (NSArray *)properties {
+    
+    NSMutableArray * arr = [NSMutableArray array];
+    
+    unsigned int outCount = 0;
+    
+    //获得属性数组
+    objc_property_t * properties = class_copyPropertyList([self class], &amp;outCount);
+    
+    for (int i = 0; i &lt; outCount; i++) {
+        //获得每一个属性
+        objc_property_t property = properties[i];
+        //获得属性名字
+        const char * cname = property_getName(property);
+        //转换成OC字符串
+        NSString * nameStr = [NSString stringWithCString:cname encoding:NSUTF8StringEncoding];
+        
+        [arr addObject:nameStr];
+        
+    }
+    
+    free(properties);
+    
+    return arr.copy;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1303CECD-76DA-47BB-B77F-CD0308309353</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>nameWithDict&amp;Properties</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

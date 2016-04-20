@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lljson</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (NSArray *)&lt;#name#&gt;s {
+    
+    NSString * path = [[NSBundle mainBundle]pathForResource:@"&lt;#JSONname#&gt;.json" ofType:nil];
+    
+    NSArray * arr = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:&lt;#(NSJSONReadingOptions)#&gt; error:nil];
+    
+    NSMutableArray * mtbArr = [NSMutableArray arrayWithCapacity:arr.count];
+    
+    for (NSDictionary * dict in arr) {
+        
+        &lt;#Class#&gt; * &lt;#name#&gt; = [&lt;#Class#&gt; &lt;#name#&gt;WithDictionary:dict];
+        
+        [mtbArr addObject:&lt;#name#&gt;];
+    }
+    
+    return mtbArr.copy;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CD17726C-1C6A-4A78-9D7D-0D66BD2075F7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>LazyLoadJSON</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

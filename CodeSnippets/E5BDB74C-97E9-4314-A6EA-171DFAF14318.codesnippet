@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ll</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (NSArray *)&lt;#name#&gt;s
+{
+    NSString * path = [[NSBundle mainBundle]pathForResource:@"&lt;#PlistName#&gt;.plist" ofType:nil];
+    
+    NSArray * arr = [NSArray arrayWithContentsOfFile:path];
+    
+    NSMutableArray * mtbArr = [NSMutableArray arrayWithCapacity:arr.count];
+    
+    for (NSDictionary * dict in arr) {
+        &lt;#ClassName#&gt; * &lt;#name#&gt; =[&lt;#ClassName#&gt; &lt;#name#&gt;WithDictionary:dict];
+        [mtbArr addObject:&lt;#name#&gt;];
+    }
+    return mtbArr.copy;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E5BDB74C-97E9-4314-A6EA-171DFAF14318</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>LazyLoad</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

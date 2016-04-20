@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>baidumap</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>key&gt;LSApplicationQueriesSchemes&lt;/key&gt;    &lt;array&gt;        &lt;string&gt;baidumap&lt;/string&gt;    &lt;/array&gt;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EA86AF7F-557A-42B4-B5DA-62E4DFF5A9D5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.XML</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>BaiduMap</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BaiduMap</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
