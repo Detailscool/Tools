@@ -3,20 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>locWU</string>
+	<string>sharedmanager</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>key&gt;NSLocationWhenInUseUsageDescription&lt;/key&gt;
-	&lt;string&gt;&lt;#Statement#&gt;&lt;/string&gt;</string>
+	<string>+ (instancetype)shared&lt;#Manager#&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C0DB208A-4D9D-45AF-8F93-4E08CB9BDEAC</string>
+	<string>0CAED392-4FA1-4ADF-ACD7-57668522A61B</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.XML</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>NSLocationWhenInUseUsageDescription-快捷键</string>
+	<string>SharedManager_h-快捷键</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,20 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>locWU</string>
+	<string>plv</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>key&gt;NSLocationWhenInUseUsageDescription&lt;/key&gt;
-	&lt;string&gt;&lt;#Statement#&gt;&lt;/string&gt;</string>
+	<string>private lazy var &lt;#name#&gt; : &lt;#Class#&gt; = {
+    
+    
+
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C0DB208A-4D9D-45AF-8F93-4E08CB9BDEAC</string>
+	<string>099A3B3C-EDDD-4B60-9873-07874CB1ED3B</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.XML</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>NSLocationWhenInUseUsageDescription-快捷键</string>
+	<string>LazyLoadForSwift</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

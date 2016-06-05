@@ -3,20 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>locWU</string>
+	<string>deperator</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>key&gt;NSLocationWhenInUseUsageDescription&lt;/key&gt;
-	&lt;string&gt;&lt;#Statement#&gt;&lt;/string&gt;</string>
+	<string>/************************ &lt;#statement#&gt; ***************************/</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C0DB208A-4D9D-45AF-8F93-4E08CB9BDEAC</string>
+	<string>165C3191-A929-4146-8205-8A0E598165C0</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.XML</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>NSLocationWhenInUseUsageDescription-快捷键</string>
+	<string>分割线-快捷键</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

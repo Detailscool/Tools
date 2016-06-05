@@ -3,20 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>locWU</string>
+	<string>mark</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>key&gt;NSLocationWhenInUseUsageDescription&lt;/key&gt;
-	&lt;string&gt;&lt;#Statement#&gt;&lt;/string&gt;</string>
+	<string>// MARK: - &lt;#name#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C0DB208A-4D9D-45AF-8F93-4E08CB9BDEAC</string>
+	<string>5C5CAF3D-C075-459A-9830-D11B1A531DE1</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.XML</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>NSLocationWhenInUseUsageDescription-快捷键</string>
+	<string>SwiftMark-快捷键</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -10,13 +10,13 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>/** &lt;#name#&gt; **/
-@property (nonatomic,copy)NSString * &lt;#name#&gt;;</string>
+@property (nonatomic,copy)&lt;#NSString *#&gt;&lt;#name#&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C2A6103D-E737-4088-80B4-31D5FC737BF9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>NSStringMake</string>
+	<string>CopyMake-快捷键</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

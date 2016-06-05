@@ -10,13 +10,13 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>key&gt;NSLocationAlwaysUsageDescription&lt;/key&gt;
-	&lt;string&gt;哈哈&lt;/string&gt;</string>
+&lt;string&gt;&lt;#Statement#&gt;&lt;/string&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>F846A18A-35DB-40DB-B711-DD6A7091AA04</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.XML</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>NSLocationAlwaysUsageDescription</string>
+	<string>NSLocationAlwaysUsageDescription-快捷键</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

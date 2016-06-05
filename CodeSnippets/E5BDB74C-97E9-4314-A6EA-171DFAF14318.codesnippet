@@ -18,7 +18,7 @@
     NSMutableArray * mtbArr = [NSMutableArray arrayWithCapacity:arr.count];
     
     for (NSDictionary * dict in arr) {
-        &lt;#ClassName#&gt; * &lt;#name#&gt; =[&lt;#ClassName#&gt; &lt;#name#&gt;WithDictionary:dict];
+        &lt;#ClassName#&gt; * &lt;#name#&gt; =[self &lt;#name#&gt;WithDictionary:dict];
         [mtbArr addObject:&lt;#name#&gt;];
     }
     return mtbArr.copy;

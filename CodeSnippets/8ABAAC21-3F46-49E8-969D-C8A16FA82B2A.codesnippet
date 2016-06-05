@@ -3,19 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ib</string>
+	<string>sharedmanager</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic,weak)IBOutlet &lt;#View#&gt; * &lt;#name#&gt;;</string>
+	<string>+ (instancetype)shared&lt;#Manager#&gt; {
+    static id instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&amp;onceToken, ^{
+        instance = [[self alloc]init];
+    });
+    return instance;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FB6C6AE8-8AF7-4097-BFCE-25063A2F00C5</string>
+	<string>8ABAAC21-3F46-49E8-969D-C8A16FA82B2A</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewWithIBOutlet</string>
+	<string>SharedManager_m-快捷键</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

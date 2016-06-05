@@ -69,21 +69,41 @@
     return self.center.y;
 }
 
+- (void)setOrigin:(CGPoint)origin {
+    CGRect frame = self.frame;
+    frame.origin.x = origin.x;
+    frame.origin.y = origin.y;
+    self.frame = frame;
+}
 
+- (CGPoint)origin {
+    return self.frame.origin;
+}
+
+- (void)setSize:(CGSize)size {
+    CGRect frame = self.frame;
+    frame.size.width = size.width;
+    frame.size.height = size.height;
+    self.frame = frame;
+}
+
+- (CGSize)size {
+    return self.frame.size;
+}
 
 - (BOOL)isShowingOnKeyWindow {
-    
     // 转换坐标系后的frame 和 keywindow的frame 有交集
     if (CGRectIntersectsRect([self.superview convertRect:self.frame toView:[UIApplication sharedApplication].keyWindow], [UIApplication sharedApplication].keyWindow.frame)) {
-        
         // 判断是否hidden,透明度是否大于0.01,window是否Keywindow
         if(self.hidden == NO && self.alpha > 0.01 && (self.window == [UIApplication sharedApplication].keyWindow)){
             return YES;
         }
     }
-    
     return NO;
 }
 
++ (instancetype)viewFromXib {
+    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
+}
 
 @end
